@@ -13,11 +13,14 @@ import org.testng.annotations.Parameters;
 
 public class BaseClass {
 	public WebDriver driver;
+	
 	public FileUtility fileutils=new FileUtility();
 	public WebDriverUtility webdriverutils=new WebDriverUtility();
+	//String browserName= "chrome";
 	
 	@BeforeMethod 
 	@Parameters("browserName")
+	
 	public void configBeforeMethod(String browserName) throws IOException {
 		//String browserName=fileutils.redDataFromPropertyFile("browser");
 		if (browserName.equals("chrome")) {
