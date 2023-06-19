@@ -16,7 +16,7 @@ public class BaseClass {
 	
 	public FileUtility fileutils=new FileUtility();
 	public WebDriverUtility webdriverutils=new WebDriverUtility();
-	//String browserName= "chrome";
+	
 	
 	@BeforeMethod 
 	@Parameters("browserName")
