@@ -20,6 +20,7 @@ public class EndToEndTrello extends BaseClass {
 		webdriverutils.implicitwait(driver);
 		Actions actions= new Actions(driver);
 		HomePage homepage = new HomePage(driver);
+		driver.get(fileutils.redDataFromPropertyFile("mainUrl"));
 		String homepageexpectedurl = fileutils.redDataFromPropertyFile("homePageUrl");
 		String homepageactualurl = driver.getCurrentUrl();
         String homepageexpectedtitle= fileutils.redDataFromPropertyFile("homePageTitle");
@@ -46,6 +47,7 @@ public class EndToEndTrello extends BaseClass {
 		} else {
 			System.out.println("no login to continue page url and title are not correct");
 		}
+		
 		LoginToContinuePage logintocontinuepage = new LoginToContinuePage(driver);
 		//if (fileutils.redDataFromPropertyFile("liginInContinuePageUrl").equals(driver.getCurrentUrl())) {
 			//if (fileutils.redDataFromPropertyFile("liginInContinuePageTitle").equals(driver.getTitle())) {
@@ -62,7 +64,8 @@ public class EndToEndTrello extends BaseClass {
 			
 		//}
 			Thread.sleep(5000);
-		BoardsPage boardpage=new BoardsPage(driver);
+		/*BoardsPage boardpage=new BoardsPage(driver);
+		boardpage.getpopup().click();
 		if (driver.getCurrentUrl().equals(fileutils.redDataFromPropertyFile("BoardsPageUrl"))) {
 			if (driver.getTitle().equals(fileutils.redDataFromPropertyFile("BoardsPageTitle"))) {
 				System.out.println("yes boards page url and title are correct");
@@ -115,7 +118,14 @@ public class EndToEndTrello extends BaseClass {
 			Thread.sleep(3000);
 			createdboardpage.getlogoutoption().click();
 			Thread.sleep(3000);
-			createdboardpage.getlogoutbutton().click();
+			createdboardpage.getlogoutbutton().click();*/
+			}
+			@Test(priority = -1)
+			
+			public  void openfacebook() throws InterruptedException {
+				webdriverutils.implicitwait(driver);
+				driver.get("http://www.fb.com");
+				Thread.sleep(5000);
 			
 	}
 			

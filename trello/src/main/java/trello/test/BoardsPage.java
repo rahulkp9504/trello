@@ -17,5 +17,11 @@ public class BoardsPage {
 	public WebElement getcreatenewboardlink() {
 		return createnewboardlink;
 	}
+	@FindBy(xpath = "//span[text()='OK']")
+	private WebElement popup;
+
+	public WebElement getpopup() {
+		return popup;
+	}
 
 }
