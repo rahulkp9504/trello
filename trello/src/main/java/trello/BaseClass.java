@@ -20,7 +20,7 @@ public class BaseClass {
 	public FileUtility fileutils=new FileUtility();
 	public WebDriverUtility webdriverutils=new WebDriverUtility();
 	String browserName = "chrome";
-	@BeforeClass 
+	@BeforeMethod 
 	//@Parameters("browserName")
 	public void configBeforeMethod() throws IOException {
 		//String browserName=fileutils.redDataFromPropertyFile("browser");
@@ -41,7 +41,7 @@ public class BaseClass {
 		
 	
 	}
-	@AfterClass
+	@AfterMethod
 	public void configAftermethod() {
 		driver.manage().window().minimize();
 		driver.quit();
