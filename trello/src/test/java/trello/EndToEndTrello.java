@@ -126,6 +126,7 @@ public class EndToEndTrello extends BaseClass {
 			public  void openfacebook() throws InterruptedException {
 				webdriverutils.implicitwait(driver);
 				driver.get("http://www.fb.com");
+				Reporter.log("fb pass");
 				Thread.sleep(5000);
 			
 	}
