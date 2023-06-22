@@ -25,6 +25,7 @@ public class EndToEndTrello extends BaseClass {
 		String homepageactualurl = driver.getCurrentUrl();
         String homepageexpectedtitle= fileutils.redDataFromPropertyFile("homePageTitle");
         String homepageactualtitle=driver.getTitle();
+		Reporter.log("end to end pass");
         if (homepageexpectedtitle.equals(homepageactualtitle))
         {
         if (homepageexpectedurl.equals(homepageactualurl))
