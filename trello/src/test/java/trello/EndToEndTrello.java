@@ -25,7 +25,7 @@ public class EndToEndTrello extends BaseClass {
 		String homepageactualurl = driver.getCurrentUrl();
         String homepageexpectedtitle= fileutils.redDataFromPropertyFile("homePageTitle");
         String homepageactualtitle=driver.getTitle();
-		Reporter.log("end to end pass");
+		
         if (homepageexpectedtitle.equals(homepageactualtitle))
         {
         if (homepageexpectedurl.equals(homepageactualurl))
@@ -126,7 +126,7 @@ public class EndToEndTrello extends BaseClass {
 			public  void openfacebook() throws InterruptedException {
 				webdriverutils.implicitwait(driver);
 				driver.get("http://www.fb.com");
-				Reporter.log("fb pass");
+				
 				Thread.sleep(5000);
 			
 	}
