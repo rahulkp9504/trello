@@ -8,7 +8,7 @@ public class OpenFacebook extends BaseClass {
 	public  void openfacebook() throws InterruptedException {
 		webdriverutils.implicitwait(driver);
 		driver.get("http://www.fb.com");
-		Reporter.log("fb other class  pass");
+	
 		Thread.sleep(5000);
 		
 	}
